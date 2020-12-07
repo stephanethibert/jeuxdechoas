@@ -1,0 +1,35 @@
+{
+
+"images": [
+    "ressources/images/pince.png"
+],
+
+"framerate": 4,
+"frames": [
+    [0, 0, 49, 18, 0, 0, 0],
+    [49, 0, 49, 43, 0, 0, 0],
+    [98, 0, 49, 61, 0, 0, 0],
+    [147, 0, 49, 92, 0, 0, 0],
+    [196, 0, 49, 137, 0, 0, 0],
+    [245, 0, 49, 180, 0, 0, 0],
+    [294, 0, 49, 224, 0, 0, 0],
+    [343, 0, 44, 220, 0, 0, 0],
+    [387, 0, 44, 180, 0, 0, 0],
+    [431, 0, 44, 136, 0, 0, 0],
+    [0, 224, 44, 91, 0, 0, 0],
+    [44, 224, 44, 61, 0, 0, 0],
+    [88, 224, 44, 42, 0, 0, 0],
+    [132, 224, 49, 20, 0, 0, 0]
+],
+
+"animations": {
+    "pinceanime": { "frames": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] }
+  
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:fee9d77c0a810b33e4334092bfe1b2b1:7e708a62f5a513aa6eb933477a47284e:adf2a71cb997b2f12a776e9a381f12dd$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

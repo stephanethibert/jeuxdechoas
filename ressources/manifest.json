@@ -1,0 +1,28 @@
+{
+  "manifest": [
+    {"id": "egout",  "src": "ressources/images/egout_bg.jpg"},
+    {"id": "projectible",  "src": "ressources/images/projectile.png"},
+    {"id": "platDroite",  "src": "ressources/images/platDroite.png"},
+    {"id": "platCentre",  "src": "ressources/images/platCentre.png"},
+    {"id": "platGauche",  "src": "ressources/images/platGauche.png"},
+    {"id": "menu",  "src": "ressources/images/interface_base.jpg"},
+    {"id": "boutonaide",  "src": "ressources/images/bouton_aide.png"},
+    {"id": "boutonjeu",  "src": "ressources/images/bouton_jeu.png"},
+    {"id": "boutonreessayer",  "src": "ressources/images/Reessayer.png"},
+    {"id": "boutonrejouer",  "src": "ressources/images/Rejouer.png"},
+    {"id": "defaite",  "src": "ressources/images/ecran_defaite_V2.png"},
+    {"id": "victoire",  "src": "ressources/images/ecran_victoire_base.jpg"},
+    {"id": "heros",  "src": "ressources/atlas/hero.json", "type": "spritesheet" },
+    {"id": "croco",  "src": "ressources/atlas/croco.json", "type": "spritesheet" },
+    {"id": "chauvesouris",  "src": "ressources/atlas/chauve-souris.json", "type": "spritesheet" },
+    {"id": "pince",  "src": "ressources/atlas/pince.json", "type": "spritesheet" },
+    {"id": "coeur",  "src": "ressources/atlas/coeur.json", "type": "spritesheet" },
+    {"id": "background0",  "src": "ressources/images/background0.jpg"},
+    {"id": "background1",  "src": "ressources/images/background01.jpg"},
+    {"id": "ennemis",  "src": "ressources/atlas/ennemi.json", "type": "spritesheet" },
+    {"id": "sol",  "src": "ressources/images/sol.jpg"},
+    {"id": "sol1",  "src": "ressources/images/sol1.jpg"},
+    {"id": "auto",  "src": "ressources/images/auto.png"},
+    {"id": "ecranvictoire",  "src": "ressources/images/ecran_victoire_base.jpg"}
+  ]
+}

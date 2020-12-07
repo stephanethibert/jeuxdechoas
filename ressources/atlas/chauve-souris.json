@@ -1,0 +1,33 @@
+{
+
+"images": [
+    "ressources/images/chauve-souris.png"
+],
+
+"framerate": 20,
+"frames": [
+    [0, 0, 157, 88, 0, 0, 0],
+    [157, 0, 140, 96, 0, 0, 0],
+    [297, 0, 111, 100, 0, 0, 0],
+    [0, 100, 140, 96, 0, 0, 0],
+    [140, 100, 157, 88, 0, 0, 0],
+    [297, 100, 111, 100, 0, 0, 0],
+    [0, 200, 111, 100, 0, 0, 0],
+    [111, 200, 111, 99, 0, 0, 0],
+    [222, 200, 112, 112, 0, 0, 0],
+    [334, 200, 83, 83, 0, 0, 0],
+    [417, 200, 34, 34, 0, 0, 0]
+],
+
+"animations": {
+    "vivant": { "frames": [0,1,2,3,4] },
+    
+    "mort": { "frames": [5,6,7,8,9,10] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:a6d38f8ab776dd99a712cc2e4b8d05a6:51bd299d23b5150f57e92394c4b29985:7701fa4d77073f039a4bfcba279ca81e$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}
