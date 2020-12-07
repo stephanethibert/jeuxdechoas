@@ -1,0 +1,51 @@
+{
+
+"images": [
+  "ressources/images/hero.png"
+],
+
+"framerate": 6,
+"frames": [
+    [0, 0, 121, 113, 0, 0, 0],
+    [121, 0, 121, 113, 0, 0, 0],
+    [242, 0, 153, 116, 0, 0, 0],
+    [395, 0, 163, 116, 0, 0, 0],
+    [558, 0, 153, 116, 0, 0, 0],
+    [711, 0, 163, 116, 0, 0, 0],
+    [874, 0, 106, 118, 0, 0, 0],
+    [0, 118, 106, 118, 0, 0, 0],
+    [106, 118, 81, 123, 0, 0, 0],
+    [187, 118, 81, 123, 0, 0, 0],
+    [268, 118, 169, 124, 0, 0, 0],
+    [437, 118, 106, 124, 0, 0, 0],
+    [543, 118, 169, 124, 0, 0, 0],
+    [712, 118, 106, 124, 0, 0, 0],
+    [818, 118, 144, 126, 0, 0, 0],
+    [0, 244, 144, 126, 0, 0, 0],
+    [144, 244, 131, 154, 0, 0, 0],
+    [275, 244, 159, 154, 0, 0, 0],
+    [434, 244, 131, 154, 0, 0, 0],
+    [565, 244, 159, 154, 0, 0, 0]
+],
+
+"animations": {
+"gauche" : { "frames": [1,9,7,9] },
+"droite" : { "frames": [0,8,6,8] },
+ "droitetir" : { "frames": [2,14,3,14] },
+ "gauchetir" : { "frames": [4,15,5,15] },
+    "tiredroiteimo": { "frames": [10] },
+    "Impbobile": { "frames": [11] },
+    "tiregaucheimo": { "frames": [12] },
+    "imogauche": { "frames": [13] },
+    "sauter": { "frames": [16] },
+    "sautertirer": { "frames": [17] },
+    "sautergauche": { "frames": [18] },
+    "sautergauchetire": { "frames": [19] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:b0c944e4cded8a3daf6cbc9027d4b160:a239653c318ce3835750595aabec6dae:eec64b416d3f54b5cb5181ef71d8f236$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

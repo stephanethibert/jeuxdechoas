@@ -1,0 +1,28 @@
+{
+
+"images": [
+  "ressources/images/birb.png"
+],
+
+"framerate": 4,
+"frames": [
+    [0, 0, 120, 58, 0, 0, 0],
+    [120, 0, 120, 58, 0, 0, 0],
+    [0, 58, 124, 72, 0, 0, 0],
+    [124, 58, 125, 72, 0, 0, 0],
+    [0, 130, 138, 51, 0, 0, 0],
+    [0, 181, 139, 50, 0, 0, 0]
+],
+
+"animations": {
+	"left" : { "frames": [0,4,0,2] },
+   "right" : { "frames": [3,5,1,3] }
+    
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:89b290d0111e0c305f38ada641a79f5f:8a8cc1d881874a732707228d10513ae0:c8d03c4a52eda65dcbc95375d5647dce$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}
