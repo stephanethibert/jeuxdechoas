@@ -5,8 +5,16 @@
     {"id": "platDroite",  "src": "ressources/images/platDroite.png"},
     {"id": "platCentre",  "src": "ressources/images/platCentre.png"},
     {"id": "platGauche",  "src": "ressources/images/platGauche.png"},
+<<<<<<< HEAD
     {"id": "boutonjeu",  "src": "ressources/images/bouton_jeu.png"},
     {"id": "boutonreessayer",  "src": "ressources/images/Reessayer.png"},
+=======
+    {"id": "menu",  "src": "ressources/images/interface_base.jpg"},
+    {"id": "boutonaide",  "src": "ressources/images/bouton_aide.png"},
+    {"id": "boutonjeu",  "src": "ressources/images/bouton_jeu.png"},
+    {"id": "boutonreessayer",  "src": "ressources/images/Reessayer.png"},
+    {"id": "boutonrejouer",  "src": "ressources/images/Rejouer.png"},
+>>>>>>> master
     {"id": "defaite",  "src": "ressources/images/ecran_defaite_V2.png"},
     {"id": "victoire",  "src": "ressources/images/ecran_victoire_base.jpg"},
     {"id": "heros",  "src": "ressources/atlas/hero.json", "type": "spritesheet" },
