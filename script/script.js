@@ -5,7 +5,6 @@ import {Chauve_souris} from './Chauve_souris.js';
 import {Pince} from './Pince.js';
 
 import {Ennemi} from "./Ennemi.js";
-import {Auto} from "./Auto.js";
 
 
 
@@ -18,19 +17,9 @@ export class Jeu {
         this.ennemisaucomplet1=this.ajouterEnnemi.bind(this);
         this.ennemisaucomplet2=this.ajouterEnnemi2.bind(this);
         this.ennemisaucomplet3=this.ajouterEnnemi3.bind(this);
-        this.temps=0;
-
-
         this.ennemisaucomplet4=this.ajouterEnnemi4.bind(this);
-        this.ennemisaucomplet5=this.auto.bind(this);
 
-        this.temps = 0;
-
-
-
-
-
-
+        this.temps = 60;
         this.timeoutennemi;
         this.timeoutennemi1;
         this.timeoutennemi2;
@@ -76,7 +65,7 @@ export class Jeu {
 
 
     }
-
+    //pour commencer le persone
     demarer(){
 
 
@@ -109,16 +98,19 @@ export class Jeu {
         setTimeout(this.animDebut.bind(this), 1500);
 
     }
+
+
+
+    //pour commencer le deuxieme niveaux
+
     demarer2(){
 
-        this.stage.removeChild(this.ajouterTimer)
-        this.detruire()
+
 
         this.ajoutebackground();
         this.ajoutesol();
         this.quelleFonctionEcouteur1 = (this.actualisersol.bind(this));
 
-        window.setInterval(this.modifierTemps2.bind(this), 1000);
         this.quelleFonctionEcouteur2 = (this.actualiser.bind(this));
 
 
@@ -141,14 +133,13 @@ export class Jeu {
         this.texteDebut.y = this.stage.canvas.height / 2 ;
         this.texteDebut.scale = 0;
 
-        this.ajouterTimer2();
-
+        this.ajouterTimer();
         this.stage.addChild(this.texteDebut);
         setTimeout(this.animDebut2.bind(this), 1500);
 
 
     }
-
+    //animer le premier texte
 
     animDebut(){
         this.animationDebut = createjs.Tween
@@ -162,6 +153,8 @@ export class Jeu {
 
 
     }
+
+    //animer le deuxieme texte
     animDebut2(){
         this.animationDebut = createjs.Tween
             .get(this.texteDebut)
@@ -174,37 +167,9 @@ export class Jeu {
 
 
     }
-
+//ajouter le temps
 
     ajouterTimer() {
-        this.seconde = new createjs.Text(this.temps,this.parametres.textes.format,"white");
-        this.seconde.regX = this.seconde.getMeasuredWidth() / 2;
-        this.seconde.x = 640;
-        this.seconde.y = 25;
-        this.seconde.cache(0, 0, this.seconde.getBounds().width + 500, this.seconde.getBounds().height);
-        this.stage.addChild(this.seconde);
-    }
-
-    modifierTemps() {
-        this.seconde.text = this.temps++;
-        this.seconde.updateCache();
-
-        if (this.viesM === 0) {
-            this.terminer2();
-        }
-
-        else  if (this.temps === 16) {
-            this.terminer();
-            this.detruire()
-        }
-
-
-    }
-
-    detruire() {
-        this.stage.removeChild(this.ajouterTimer);
-    }
- ajouterTimer2() {
         this.seconde = new createjs.Text(this.temps,this.parametres.textes.format,"black");
         this.seconde.regX = this.seconde.getMeasuredWidth() / 2;
         this.seconde.x = 640;
@@ -212,32 +177,28 @@ export class Jeu {
         this.seconde.cache(0, 0, this.seconde.getBounds().width + 500, this.seconde.getBounds().height);
         this.stage.addChild(this.seconde);
     }
+    //pourr descendre le temps
+    modifierTemps() {
+        this.seconde.text = this.temps--;
 
-    modifierTemps2() {
-        this.seconde.text = this.temps++;
         this.seconde.updateCache();
 
         if (this.viesM === 0) {
             this.terminer2();
         }
 
-        else  if (this.temps === 60) {
-            this.gagner();
+        else  if (this.temps === 30) {
+            this.terminer();
+
         }
-
-
+        else if (this.temps===0){
+            this.terminer2()
+            this.gagner()
+        }
     }
 
-    detruire2() {
-        this.stage.removeChild(this.ajouterTimer);
-    }
-
-
-
-
+    //pour demarer le premier niveaux
     commencerJeu(){
-
-
 
         this.conteneurEnnemis = new createjs.Container();
         this.stage.addChild(this.conteneurEnnemis);
@@ -249,55 +210,35 @@ export class Jeu {
         this.timeoutennemi= setTimeout(this.ennemisaucomplet1,5000);
         this.timeoutennemi1=setTimeout(this.ennemisaucomplet2,5000);
         this.timeoutennemi2=setTimeout(this.ennemisaucomplet3,5000);
-
-
         setTimeout(this.vieHeros.bind(this), 100);
-
     }
-    commencerJeu2(){
 
+    //pour demarer le deuxieme niveaux
+    commencerJeu2(){
         this.conteneurauto = new createjs.Container();
         this.stage.addChild(this.conteneurauto)
         this.conteneurEnnemis3 = new createjs.Container();
         this.stage.addChild(this.conteneurEnnemis3)
-
-
         setTimeout(this.ajouterPersonnage.bind(this), 3000);
-
-        this.timeoutennemiautomobile= setTimeout(this.ennemisaucomplet5,5000);
-
         this.timeoutennemiconstucteur= setTimeout(this.ennemisaucomplet4,5000);
+    setTimeout(this.vieHeros.bind(this), 100);
 
-
-
-
-
-        setTimeout(this.vieHeros.bind(this), 100);
-
-        this.stage.addChild(this.interface);
 
     }
 
+
+    //pour activer le ecran de gagnant
+
+
  gagner(){
      this.personnage.detruire()
-     clearTimeout(this.timeoutennemiautomobile);
      clearTimeout(this.timeoutennemiconstucteur);
-        this.detruire2()
-
      this.gagnerecran=new createjs.Bitmap(this.chargeur.getResult("ecranvictoire"), true);
      this.stage.addChild(this.gagnerecran)
 
-
-
-
-
-
-
  }
 
-
-
-
+    //ajouter les crocodiles
 
 
     ajouterEnnemi() {
@@ -312,6 +253,9 @@ export class Jeu {
         this.timeoutennemi1=setTimeout(this.ennemisaucomplet1, Math.random() * 2000 + 2000);
 
     }
+
+
+    //ajouter les chauve souris
     ajouterEnnemi2() {
 
         if(!createjs.Ticker.paused){
@@ -324,6 +268,9 @@ export class Jeu {
         this.timeoutennemi2=setTimeout(this.ennemisaucomplet2, Math.random() * 2000 + 2000);
 
     }
+
+
+    //ajouter les pinces
     ajouterEnnemi3() {
 
         if(!createjs.Ticker.paused){
@@ -346,7 +293,7 @@ export class Jeu {
 
 
 
-
+//ajouter les constucteur
 
     ajouterEnnemi4() {
 
@@ -362,19 +309,7 @@ export class Jeu {
 
     }
 
-    auto() {
-        if (!createjs.Ticker.paused) {
-            let autombile = new Auto(this.chargeur.getResult("auto"));
-            autombile.x = this.stage.canvas.width + autombile.getBounds().width;
-            autombile.y = this.solrue[0].y + 100;
-            autombile.scale=3
-            this.conteneurauto.addChild(autombile);
-        }
-        this.timeoutennemiautomobile = setTimeout(this.auto.bind(this), Math.random() * 2000 + 2000);
-
-    }
-
-
+    //ajouter le personnage principale
 
 
 
@@ -387,6 +322,8 @@ export class Jeu {
         this.stage.addChild(this.personnage);
 
     }
+
+    //pour enlenver les vies
 
     retireVieHeros() {
         this.viesM--;
@@ -414,7 +351,7 @@ export class Jeu {
 
 
     }
-
+//les vies heros
 
     vieHeros() {
         console.log(this.viesM);
@@ -453,7 +390,7 @@ export class Jeu {
 
 
     //
-    //
+    //pour regarder si les boutons sont touchers
     gererTouchePesee(e) {
 
         if (e.key === 'ArrowRight') {
@@ -466,7 +403,7 @@ export class Jeu {
         }
 
     }
-
+    //ecran de defaite
     ecranDefaite(){
 
         this.defaite= new createjs.Bitmap(this.chargeur.getResult('defaite'), true);
@@ -477,15 +414,11 @@ export class Jeu {
         this.boutonReessayer()
 
     }
+    //pour perdre daans le premier niveaux
 
     terminer(){
 
 
-
-        console.log(this.conteneurEnnemis)
-        console.log(this.conteneurEnnemis1)
-        console.log(this.conteneurEnnemis2)
-        this.detruire()
         this.personnage.detruire()
         clearTimeout(this.timeoutennemi);
         clearTimeout(this.timeoutennemi1);
@@ -533,13 +466,9 @@ export class Jeu {
 
 
     }
-
+    //pour perdre dans le deuxieme niveaux
     terminer2(){
 
-
-        console.log(this.conteneurEnnemis)
-        console.log(this.conteneurEnnemis1)
-        console.log(this.conteneurEnnemis2)
         this.personnage.detruire()
         clearTimeout(this.timeoutennemi);
         clearTimeout(this.timeoutennemi1);
@@ -584,40 +513,31 @@ export class Jeu {
 
 
     }
-    // boutonReessayer(){
-    //     this.btnReessayer= new createjs.Bitmap(this.chargeur.getResult('boutonreessayer'), true);
-    //     this.btnReessayer.x=500;
-    //     this.btnReessayer.y=550;
-    //     this.stage.addChild(this.btnReessayer);
-    //
-    //
-    //
-    //
-    //     this.btnReessayer.addEventListener("click", () => {
-    //         this.stage.removeChild(this.defaite, this.btnReessayer);;
-    //         this.terminer()
-    //         this.demarer();
-    //
-    //
-    //
-    //
-    //     });
-    // }
+
+
+    //recomencer le jeux
+
+
+
+    boutonReessayer(){
+        this.btnReessayer= new createjs.Bitmap(this.chargeur.getResult('boutonreessayer'), true);
+        this.btnReessayer.x=500;
+        this.btnReessayer.y=550;
+        this.stage.addChild(this.btnReessayer);
 
 
 
 
+        this.btnReessayer.addEventListener("click", () => {
+            window.location.reload();
 
 
 
 
+        });
+    }
 
-
-
-
-
-
-
+    //faire le sol bouger avec le personnage
 
     ajoutesol() {
 
@@ -646,7 +566,7 @@ export class Jeu {
 
 
     }
-
+    //faire le arrire plan bouger avec le personnage
     ajoutebackground() {
 
 
@@ -665,7 +585,7 @@ export class Jeu {
     }
 
 
-
+    //actualiser larrie plan
     actualiser1(e) {
         if (this.mouvement === 'droite') {
             this.background.forEach(function (element) {
@@ -697,7 +617,7 @@ export class Jeu {
 
     }
 
-
+    //actualsier le sol
     actualisersol(e) {
         if (this.mouvement === 'droite') {
             this.solrue.forEach(function (element) {
