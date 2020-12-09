@@ -25,7 +25,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ressources/images" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/jeuxdechoas" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -57,11 +57,7 @@
       <workItem from="1607026275811" duration="222000" />
       <workItem from="1607026516521" duration="114000" />
       <workItem from="1607026640677" duration="4000" />
-<<<<<<< HEAD
-      <workItem from="1607193807005" duration="30339000" />
-=======
-      <workItem from="1607193807005" duration="27656000" />
->>>>>>> master
+      <workItem from="1607193807005" duration="31302000" />
     </task>
     <servers />
   </component>
@@ -69,9 +65,13 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2360" y="455" key="FileChooserDialogImpl" timestamp="1607245545846">
+    <state x="2360" y="455" key="FileChooserDialogImpl" timestamp="1607553901913">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="2360" y="455" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1607245545846" />
+    <state x="2360" y="455" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1607553901913" />
+    <state x="1792" y="512" width="585" height="534" key="find.popup" timestamp="1607469193440">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1792" y="512" width="585" height="534" key="find.popup/0.0.3440.1400@0.0.3440.1400" timestamp="1607469193440" />
   </component>
 </project>
